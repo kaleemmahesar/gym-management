@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0b1220;
+}
+
+body.theme-dark {
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+body.theme-light {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Light theme overrides for existing Tailwind slate-heavy classes */
+body.theme-light [class*="bg-slate-950"] {
+  background-color: #f8fafc !important;
+}
+body.theme-light [class*="bg-slate-900"] {
+  background-color: #ffffff !important;
+}
+body.theme-light [class*="border-slate-800"] {
+  border-color: #cbd5e1 !important;
+}
+body.theme-light [class*="text-slate-100"],
+body.theme-light [class*="text-slate-50"] {
+  color: #0f172a !important;
+}
+body.theme-light [class*="text-slate-400"],
+body.theme-light [class*="text-slate-300"],
+body.theme-light [class*="text-slate-200"] {
+  color: #475569 !important;
+}
